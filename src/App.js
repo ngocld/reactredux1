@@ -1,12 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import './App.scss';
+import Search from './components/page/search/Search';
+import Add from './components/page/add/Add';
 
 function App() {
   return (
-    <div className="app">
-      tinh cho khong bieu khong
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Search />
+        </Route>
+        <Route path="/search">
+          <Search />
+        </Route>
+        <Route path="/add">
+          <Add />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

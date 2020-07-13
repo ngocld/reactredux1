@@ -41,7 +41,8 @@
     <div class="container mb-2">
         <form class="form-inline">
             <div class="form-group">
-                <input type="text" name="search" class="form-control mr-2" placeholder="Nhập từ khóa tìm kiếm" aria-describedby="helpId">
+                <input type="text" name="search" class="form-control mr-2" placeholder="Nhập từ khóa tìm kiếm"
+                    aria-describedby="helpId">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
@@ -60,55 +61,16 @@
             </thead>
             <tbody>
                 <tr>
-                    <td scope="row">1</td>
-                    <td>001</td>
-                    <td>Lê Dũng Ngọc</td>
-                    <td>FIS GMC</td>
-                    <td>
-                        <button type="button" class="btn btn-outline-primary">
-                            <i class="fas fa-asterisk    "></i>
-                        </button>
-                        <button type="button" class="btn btn-outline-primary">
-                            <i class="fas fa-archway    "></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td scope="row">2</td>
-                    <td>002</td>
-                    <td>Lê Dũng Hùng Minh</td>
-                    <td>FIS BANK</td>
-                    <td>
-                        <button type="button" class="btn btn-outline-primary">
-                            <i class="fas fa-asterisk    "></i>
-                        </button>
-                        <button type="button" class="btn btn-outline-primary">
-                            <i class="fas fa-archway    "></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td scope="row">3</td>
-                    <td>003</td>
-                    <td>Lê Dũng Hùng Phong</td>
-                    <td>FIS BANK</td>
-                    <td>
-                        <button type="button" class="btn btn-outline-primary">
-                            <i class="fas fa-asterisk    "></i>
-                        </button>
-                        <button type="button" class="btn btn-outline-primary">
-                            <i class="fas fa-archway    "></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
                     <td scope="row">4</td>
                     <td>004</td>
                     <td>Lê Dũng Hùng Kiệt</td>
                     <td>FIS ERP</td>
                     <td>
-                        <button type="button" class="btn btn-outline-primary">
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                            data-target="#modelId">
                             <i class="fas fa-asterisk    "></i>
+                        </button>
+                        
                         </button>
                         <button type="button" class="btn btn-outline-primary">
                             <i class="fas fa-archway    "></i>
@@ -117,7 +79,30 @@
                 </tr>
             </tbody>
         </table>
+    </div>
 
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">CẬP NHẬT THÔNG TIN</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 

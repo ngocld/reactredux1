@@ -1,5 +1,7 @@
+$color: lightblue;
+
 .app{
   width: 900px;
   margin: 60px auto;
-  border: 1px solid lightblue;;
+  border: 1px solid $color;
 }
