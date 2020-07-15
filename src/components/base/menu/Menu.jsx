@@ -30,21 +30,8 @@ class Menu extends Component {
 
                     <div className="collapse navbar-collapse" id="collapsibleNavId">
                         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-
                             <li><Link to="/search">Search</Link></li>
                             <li><Link to="/add">Add</Link></li>
-
-                            {/* <li className="nav-item active">
-                                <a className="nav-link" href="/search">
-                                    Search
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/add">
-                                    Add
-                                </a>
-                            </li> */}
-
                         </ul>
                     </div>
                 </nav>
