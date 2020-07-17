@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,57 +12,48 @@ import {
 import './App.scss';
 import Search from './components/page/search/Search';
 import Add from './components/page/add/Add';
+import { connect } from 'react-redux';
 
 
-export default class App extends Component {
+class App extends Component {
+
+
+  handleClickButton = () => {
+    // const { dispatch } = this.props
+    // dispatch({ type: 'CHANGE' })
+    // this.props.onClickButton()
+    // this.props.onClickButton1()
+    this.props.onClickButton2()
+  }
 
   render() {
-
-    var redux = require('redux')
-
-    var oldState = {
-      num: ['Man Hinh', 'Chuot', 'Ban Phim'],
-      editStatus: true
-    }
-
-    var reducer1 = (state = oldState, action) => {
-      switch (action.type) {
-        case "CHANGE_STATUS":
-          return {...state, editStatus: !state.editStatus}
-          break;
-
-        default:
-          break;
-      }
-
-      return state
-    }
-
-    var store1 = redux.createStore(reducer1)
-    store1.dispatch({type: "CHANGE_STATUS"})
-    console.log(store1.getState());
-
-    // var redux = require('redux')
-    // var oldState = {
-    //   num: ["Man hinh", "Chuot", "Ban Phim"],
-    //   editStatus: true
-    // }
-
-    // var reducer1 = (state=oldState, action) => {
-    //   return state
-    // }
-
-    // var store1 = redux.createStore(reducer1)
-
-
     return (
       <div>
-        Mình đang học redux
+        Mình đang học redux. Giá trị của react là:
+        
+        <button onClick={() => this.handleClickButton()}>Test su kien</button>
+
       </div>
     )
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    dulieu: [state.device]
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onClickButton: () => dispatch({ type: 'CHANGE' }),
+    onClickButton1: () => dispatch({ type: 'ADD', payload: 'Máy in'}),
+    onClickButton2: () => dispatch({ type: 'DELETE', payload: 0}),
+  }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
 
 // function App() {
 //   return (
